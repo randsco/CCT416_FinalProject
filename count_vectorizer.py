@@ -34,7 +34,8 @@ word_counts_df = word_counts_df.sort_values(by='count', ascending=False).head(10
 # Top 10 words
 
 plt.bar(word_counts_df['word'], word_counts_df['count'])
-plt.title('Top 10 Words in Tweets (CountVectorizer)')
+plt.title(f'{FILENAME} Top 10 Words in Tweets (CountVectorizer)')
 plt.xlabel('Words')
 plt.ylabel('Frequency')
+plt.xticks(rotation=45)
 plt.show()

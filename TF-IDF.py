@@ -96,7 +96,7 @@ top_tfidf=(top_tfidf-top_tfidf.min())/(top_tfidf.max()-top_tfidf.min())
 # Plot the top 10 most significant words
 plt.figure(figsize=(10, 5))
 top_tfidf.plot(kind='bar')
-plt.title('Top 10 Most Significant Words')
+plt.title(f'{FILENAME} Top 10 Most Significant Words')
 plt.xlabel('Words')
 plt.ylabel('TF-IDF Score')
 plt.xticks(rotation=45)
