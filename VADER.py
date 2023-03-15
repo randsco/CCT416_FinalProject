@@ -59,7 +59,7 @@ with open(f'output/{FILENAME}_cleaned.csv', 'r') as file:
     plt.show() # Display the chart
 
     # Write the sentiment summary and VADER statistics to a new CSV file
-    with open(f'output/{FILENAME}_vader_sentiment_summary.csv', 'w', newline='') as output_file:
+    with open(f'results/{FILENAME}_vader_sentiment_summary.csv', 'w', newline='') as output_file:
         writer = csv.writer(output_file)
 
         writer.writerow(['Sentiment', 'Count'])
