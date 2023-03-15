@@ -6,8 +6,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 
+# Input files
+FILENAME = "G5-2"
+
 # Load the dataset
-tweets = pd.read_csv('labeled_data.csv')
+tweets = pd.read_csv(f'output/{FILENAME}_labeled.csv')
 
 # Replace any np.nan values with an empty string
 tweets = tweets.replace(np.nan, '', regex=True)
@@ -41,14 +44,14 @@ print(classification_report(y_test, y_pred))
 print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
 
-with open('classification_report_naive.txt', 'w') as f:
+with open(f'output/{FILENAME}_classification_report_naive.txt', 'w') as f:
     f.write(classification_report(y_test, y_pred))
 
 # Plot a confusion matrix
 fig, ax = plt.subplots(figsize=(8, 8))
 ax.imshow(confusion_matrix(y_test, y_pred))
 ax.grid(False)
-plt.title('Confusion Matrix (Naive Bayes)')
+plt.title(f'{FILENAME} Confusion Matrix (Naive Bayes)')
 ax.set_xlabel('Predicted Labels')
 ax.set_ylabel('True Labels')
 ax.xaxis.set(ticks=(0, 1, 2), ticklabels=('Positive', 'Negative', 'Neutral'))
@@ -61,7 +64,7 @@ plt.show()
 
 
 # Load the new text data
-new_tweets = pd.read_csv('tweets-step2.csv', usecols=['Tweet', 'Cleaned_tweet'])
+new_tweets = pd.read_csv(f'output/{FILENAME}_cleaned.csv', usecols=['Tweet', 'Cleaned_tweet'])
 
 import re
 import string
