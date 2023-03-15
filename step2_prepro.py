@@ -9,10 +9,10 @@ from collections import Counter
 import re
 
 # Input files
-TWEETS = "G5-2"
+FILENAME = "G5-2"
 
 # load the csv file into a pandas dataframe
-df = pd.read_csv(f'output/{TWEETS}_preprocessed.csv')
+df = pd.read_csv(f'output/{FILENAME}_preprocessed.csv')
 
 # initialize the NLTK lemmatizer and stopwords
 lemmatizer = WordNetLemmatizer()
@@ -57,10 +57,10 @@ def clean_tweet(tweet):
 df['Cleaned_tweet'] = df['Tweet'].apply(clean_tweet)
 
 # save the cleaned tweets to a new CSV file
-df.to_csv(f'output/{TWEETS}_cleaned.csv', index=False)
+df.to_csv(f'output/{FILENAME}_cleaned.csv', index=False)
 
 # load the cleaned tweets CSV file into a pandas dataframe
-df2 = pd.read_csv(f'output/{TWEETS}_cleaned.csv', usecols=['Cleaned_tweet'])
+df2 = pd.read_csv(f'output/{FILENAME}_cleaned.csv', usecols=['Cleaned_tweet'])
 print(df2['Cleaned_tweet'])
 
 # Replace missing values with empty strings
@@ -78,7 +78,7 @@ top_words_counts = [word[1] for word in top_words]
 
 # plot the top 10 most frequent words on a bar graph
 plt.bar(top_words_list, top_words_counts)
-plt.title('Top 10 Most Frequent Words')
+plt.title(f'{FILENAME} Top 10 Most Frequent Words')
 plt.xlabel('Words')
 plt.ylabel('Frequency')
 plt.xticks(rotation=45)

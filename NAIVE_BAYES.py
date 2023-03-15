@@ -105,7 +105,7 @@ new_tweets['predicted_sentiment'] = y_new_pred
 # Get the count of predicted sentiment labels and plot a bar graph
 sentiment_counts = new_tweets['predicted_sentiment'].value_counts()
 sentiment_counts.plot(kind='bar')
-plt.title('Predicted Sentiment Labels (Naive Bayes)')
+plt.title(f'{FILENAME} Predicted Sentiment Labels (Naive Bayes)')
 plt.xlabel('Sentiment Label')
 plt.ylabel('Count')
 plt.show()

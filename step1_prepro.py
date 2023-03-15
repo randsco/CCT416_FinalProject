@@ -7,7 +7,7 @@ from collections import Counter
 FILENAME = "G5-2"
 
 # read the csv file
-with open(f"{FILENAME}.csv", "r", encoding="UTF-8") as file:
+with open(f"input/{FILENAME}.csv", "r", encoding="UTF-8") as file:
     reader = csv.reader(file)
     data = list(reader)
 

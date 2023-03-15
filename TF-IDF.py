@@ -89,7 +89,7 @@ top_tfidf = df_tfidf.sum().sort_values(ascending=False)[:10]
 # max_score = max(top_tfidf)
 # top_tfidf = [score / max_score for score in top_tfidf]
 
-# top_tfidf=(top_tfidf-top_tfidf.min())/(top_tfidf.max()-top_tfidf.min())
+top_tfidf=(top_tfidf-top_tfidf.min())/(top_tfidf.max()-top_tfidf.min())
 
 # print(top_tfidf)
 
