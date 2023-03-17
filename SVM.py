@@ -36,11 +36,11 @@ print(classification_report(y_test, y_pred))
 print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
 
-with open(f'output/{FILENAME}_classification_report_svm.txt', 'w') as f:
+with open(f'results/{FILENAME}_classification_report_svm.txt', 'w') as f:
     f.write(classification_report(y_test, y_pred))
 
 # Save the classification report to a text file
-with open(f'output/{FILENAME}_classification_report_svm.txt', 'w') as f:
+with open(f'results/{FILENAME}_classification_report_svm.txt', 'w') as f:
     f.write(classification_report(y_test, y_pred))
 
 
