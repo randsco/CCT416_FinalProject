@@ -43,7 +43,6 @@ with open(f'results/{FILENAME}_classification_report_svm.txt', 'w') as f:
 with open(f'results/{FILENAME}_classification_report_svm.txt', 'w') as f:
     f.write(classification_report(y_test, y_pred))
 
-
 # Plot a confusion matrix
 fig, ax = plt.subplots(figsize=(8, 8))
 ax.imshow(confusion_matrix(y_test, y_pred))
@@ -92,4 +91,5 @@ ax.set_xticks(sentiments)
 ax.set_xticklabels(['Negative', 'Neutral', 'Positive'])
 ax.set_ylabel('Count')
 ax.set_title(f'{FILENAME} Overall Sentiment (SVM)')
+plt.xticks(rotation=0)
 plt.show()
