@@ -30,6 +30,9 @@ X_test = vectorizer.transform(X_test)
 clf = MultinomialNB()
 clf.fit(X_train, y_train)
 
+print("HERE!!!!!!!!!!!!!!!!!!!!")
+print(clf.classes_)
+
 # Test the model
 y_pred = clf.predict(X_test)
 
@@ -54,8 +57,8 @@ ax.grid(False)
 plt.title(f'{FILENAME} Confusion Matrix (Naive Bayes)')
 ax.set_xlabel('Predicted Labels')
 ax.set_ylabel('True Labels')
-ax.xaxis.set(ticks=(0, 1, 2), ticklabels=('Positive', 'Negative', 'Neutral'))
-ax.yaxis.set(ticks=(0, 1, 2), ticklabels=('Positive', 'Negative', 'Neutral'))
+ax.xaxis.set(ticks=(0, 1, 2), ticklabels=('Negative', 'Neutral', 'Positive'))
+ax.yaxis.set(ticks=(0, 1, 2), ticklabels=('Negative', 'Neutral', 'Positive'))
 for i in range(3):
     for j in range(3):
         ax.text(j, i, confusion_matrix(y_test, y_pred)[i, j], ha='center', va='center', color='white')
