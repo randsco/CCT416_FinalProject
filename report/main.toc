@@ -1,0 +1,5 @@
+\contentsline {section}{Introduction}{2}{Doc-Start}% 
+\contentsline {section}{Methodology}{3}{Doc-Start}% 
+\contentsline {section}{Observations}{4}{Doc-Start}% 
+\contentsline {section}{Discussion}{5}{Doc-Start}% 
+\contentsline {section}{Conclusion}{6}{Doc-Start}% 
