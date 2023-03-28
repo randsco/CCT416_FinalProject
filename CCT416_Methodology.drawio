@@ -1,11 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2023-03-28T16:18:53.246Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" etag="BK1RjXIKPmBjI0nlEvJ8" version="21.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-28T16:41:08.181Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" etag="f32C2G7879I9ARn5hMjW" version="21.0.8" type="github">
   <diagram name="Page-1" id="fVHZ1sfxp8ctlBkrv8Ka">
     <mxGraphModel dx="954" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="x4eMJo4EBV7eQhnRsea5-1" value="Retrieve 1000 random tweets with Twitter API v2. Query: #climatechange OR climate change OR climate crisis OR global warming lang:en" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="70" width="290" height="60" as="geometry" />
+          <mxGeometry x="50" y="50" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x4eMJo4EBV7eQhnRsea5-3" value="&lt;div style=&quot;&quot;&gt;Preprocess tweets with tweet-preprocessor&lt;/div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Remove irrelevant data&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Stop words&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;2-letter words&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;HTML tags&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Punctuation&lt;/li&gt;&lt;/ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Prepare tweets for analysis&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Tokenize tweets&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Lemmatize tokens&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="70" y="180" width="250" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
