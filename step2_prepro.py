@@ -33,11 +33,20 @@ def clean_tweet(tweet):
     # Remove "..."
     tweet = re.sub(r"\.{3}", "", tweet)
 
+    # Remove ".."
+    tweet = re.sub(r"\.{2}", "", tweet)
+    
+    # Remove "//"
+    tweet = re.sub(r"\/{2}", "", tweet)
+
     # Remove "" "
     tweet = re.sub(r"\"{1}", "", tweet)
 
+    # # Remove everything that's not a letter or space
+    # tweet = tweet = re.sub(r"[^\w\s]", " ", tweet)
+
     # tokenize the tweet
-    tokens = word_tokenize(tweet.lower())
+    tokens = word_tokenize(tweet.lower(), preserve_line=True)
 
     # remove digits and punctuation
     tokens = [token for token in tokens if not token.isdigit() and token not in string.punctuation]

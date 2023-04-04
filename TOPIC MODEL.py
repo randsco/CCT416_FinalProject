@@ -9,6 +9,9 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # Load tweets from CSV file
 tweets_df = pd.read_csv("output/G5-2_cleaned.csv")
 
+# Replace missing values with empty strings
+tweets_df['Cleaned_tweet'] = tweets_df['Cleaned_tweet'].fillna('')
+
 # Create dictionary and corpus
 dictionary = corpora.Dictionary([text.split() for text in tweets_df["Cleaned_tweet"]])
 corpus = [dictionary.doc2bow(text.split()) for text in tweets_df["Cleaned_tweet"]]
@@ -21,6 +24,6 @@ for i, topic in lda_model.show_topics(num_topics=10, num_words=10, formatted=Fal
     print("Topic {}: {}".format(i, " ".join([w[0] for w in topic])))
 
 # Save topics to file
-with open("topics.txt", "w") as f:
+with open("topics_m.txt", "w") as f:
     for i, topic in lda_model.show_topics(num_topics=10, num_words=10, formatted=False):
         f.write("Topic {}: {}\n".format(i, " ".join([w[0] for w in topic])))

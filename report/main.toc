@@ -1,5 +1,6 @@
-\contentsline {section}{Introduction}{2}{Doc-Start}% 
-\contentsline {section}{Methodology}{3}{Doc-Start}% 
-\contentsline {section}{Observations}{4}{Doc-Start}% 
-\contentsline {section}{Discussion}{5}{Doc-Start}% 
-\contentsline {section}{Conclusion}{6}{Doc-Start}% 
+\contentsline {section}{Introduction}{2}{table.1}% 
+\contentsline {section}{Methodology}{3}{table.1}% 
+\contentsline {subsection}{Pre-processing}{3}{section*.1}% 
+\contentsline {section}{Observations}{4}{section*.1}% 
+\contentsline {section}{Discussion}{6}{figure.2}% 
+\contentsline {section}{Conclusion}{7}{figure.2}% 
